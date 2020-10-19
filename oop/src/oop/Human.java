@@ -1,5 +1,16 @@
 package oop; // oop is package name
 
+/*
+ * Types of class :
+ * POJO Class
+ * Static Class
+ * Concrete Class
+ * Abstract Class
+ * Final Class
+ * Inner class
+ * Nested Inner class
+ */
+
 // public is access modifier, that's means visible in the whole programs
 public class Human { // class
 	
