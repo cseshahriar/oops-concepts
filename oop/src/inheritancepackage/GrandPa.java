@@ -2,8 +2,8 @@ package inheritancepackage;
 
 public class GrandPa {
 	
-	// properties method
+	// GrandPa properties(method)
 	public void properties() {
-		System.out.println("Grandfather's Properties");
+		System.out.println("Father Properties from GrandPa class");
 	}
 }

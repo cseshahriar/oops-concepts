@@ -1,22 +1,20 @@
 package oop; // oop package
 
-public class MyOOP { // class
-
-	public MyOOP() {
-		// TODO Auto-generated constructor stub
-	}
+public class MyOOP { 
 
 	public static void main(String[] args) {
-		// we are in same packages, so we can make obj from Human Class
 		
 		// Object of Human Class 
 		Human objHuman = new Human();
 		
+		objHuman.setName("Shahriar");
+		objHuman.setAge(27);
+		// objHuman.setHeight(5.5);
+		objHuman.setColor("Brown");
+		
 		// method calling or access
-		objHuman.name("Shahriar");
-		objHuman.age(27);
-       //objHuman.color("Brown"); 
-		objHuman.height(5.5);
+		System.out.println(	objHuman.getName() +" "+ objHuman.getAge() +"  "+ objHuman.getColor());
+		// System.out.println(objHuman.getHeight());
 
 	}
 

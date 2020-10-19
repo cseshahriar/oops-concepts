@@ -12,30 +12,81 @@ package oop; // oop is package name
  */
 
 // public is access modifier, that's means visible in the whole programs
-public class Human { // class
+public class Human { 
 	
-	public static void main(String[] args) { // main method
+	//fields (or instance variable)
+	public String name, color;
+	public Integer age;
+	public Double height;
+	
+	// =============== constructors ================
+	
+	/* If you do not implement any constructor in your class, 
+	 * Java compiler inserts a default constructor into your code on your behalf. 
+	 * This constructor is known as default constructor. 
+	 */
+	
+	// no-arg constructor
+	public Human() {
 		
-		// Object of Human Class 
-		Human objHuman = new Human();
-		
-		// method calling or access, object.methodName
-		objHuman.name("Shahriar");
-		objHuman.age(27);
-		objHuman.color("Brown");
-		objHuman.height(5.5);
 	}
 	
-	// methods 
-	// default, public, private, protected is access modifier
+	//parameterized constructor with one parameters
+	public Human(String name) {
+		this.name = name;
+	}
 	
+	//parameterized constructor with two parameters
+	public Human(String name, Integer age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	//parameterized constructor with three parameters
+	public Human(String name, Integer age, Double height) {
+		this.name = name;
+		this.height = height;
+		this.age = age;
+	}
+	
+	//parameterized constructor with four parameters
+	public Human(String name, Integer age, Double height, String color) {
+		this.name = name;
+		this.color = color;
+		this.height = height;
+		this.age = age;
+	}
+	
+	// ================== getter methods ================
+	String getName() {
+		return this.name;
+	}
+	
+	public String getColor() {
+		return this.color;
+	}
+	
+	protected Integer getAge() {
+		return this.age;
+	}
+	
+	private Double getHeight() {
+		return this.height;
+	}
+	
+	
+	// ================== setter methods ================
+	
+	// default, public, private, protected are access modifiers
+
 	/*
 	 * Default: The access level of a default modifier is only within the package.
 	 * It cannot be accessed from outside the package.
 	 * If you do not specify any access level, it will be the default.
 	 */
-	void height(Double height) {
-		System.out.println("The height of the Human is: "+ height);
+	
+	void setName(String nameString) {
+		this.name = nameString;
 	}
 	
 	/*
@@ -43,8 +94,8 @@ public class Human { // class
 	 * It can be accessed from within the class, outside the class,
 	 * within the package and outside the package.
 	 */
-	public void name(String name) {
-		System.out.println("The name of the Human is: " + name);
+	public void setColor(String colorString) {
+		this.color = colorString;
 	}
 	
 	/*
@@ -53,8 +104,8 @@ public class Human { // class
 	 * If you do not make the child class, 
 	 * it cannot be accessed from outside the package.
 	 */
-	protected void age(Integer age) {
-		System.out.println("The age of the Human is: " + age);
+	protected void setAge(Integer ageInteger) {
+		this.age = ageInteger;
 	}
 	
 	/* 
@@ -62,9 +113,44 @@ public class Human { // class
 	 * only within the class.
 	 *  It cannot be accessed from outside the class.
 	 */
-	private void color(String color) {
-		System.out.println("The Color of the Human is: " + color);
+	private void setHeight(Double heightDouble) {
+		this.height = heightDouble;
 	}
 	
+
+	public static void main(String[] args) { // main method
+		
+		//Creating objects 
+		Human objHuman = new Human();
+		Human objHuman2 = new Human("Shosen", 27);
+		Human objHuman3 = new Human("Salpin", 27, 5.5);
+		Human objHuman4 = new Human("Salpin", 27, 5.5, "Brown");
+		
+		
+		//Accessing object data through reference
+		// objHuman.name = "Shahriar";
+		// objHuman.age = 27;
+		// objHuman.height = 5.5;
+		//objHuman.color = "Brown";
+		
+		objHuman.setName("Shahriar");
+		objHuman.setAge(27);
+		objHuman.setHeight(5.5);
+		objHuman.setColor("Brown");
+		
+		// obj1
+		System.out.println(objHuman.name);
+		System.out.println(objHuman.getName() + "\n");
+		
+		// obj2
+		System.out.println(objHuman2.name +" "+objHuman2.age+ "\n");
+		
+		// obj3
+		System.out.println(objHuman3.name +" "+objHuman3.age+" "+objHuman3.height+"\n");
+		
+		// obj4
+		System.out.println(objHuman4.getName() + " " + objHuman4.age +" "+objHuman4.height+" "+ objHuman4.color);
+		
+	}
 	
 }
