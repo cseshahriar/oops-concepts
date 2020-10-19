@@ -12,7 +12,7 @@ public class TestKlass {
 		Human objHuman = new Human();
 		
 		// method calling or access
-		objHuman.name("Shahriar");
+		// objHuman.name("Shahriar");
         // objHuman.age(27);
         // objHuman.color("Brown");
         // objHuman.height(5.5);

@@ -10,7 +10,7 @@ public class Dog extends Animal{
 	public static void main(String args[]) {
 		
 		// Animal class type Dog class object
-		Animal obj = new Cat();
+		Animal obj = new Dog();
 		
 		// method calling
 		obj.sound();

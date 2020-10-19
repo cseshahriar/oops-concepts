@@ -4,8 +4,10 @@ package oop; // oop is package name
  * Types of class :
  * POJO Class
  * Static Class
+ * 
  * Concrete Class
  * Abstract Class
+ * 
  * Final Class
  * Inner class
  * Nested Inner class
