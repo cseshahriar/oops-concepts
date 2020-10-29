@@ -35,15 +35,25 @@ public class NewThread extends Thread {
 			} catch (InterruptedException e) {
 				System.out.println(e);
 			} 
-			System.out.println(i);
+			System.out.println("running thread name " + Thread.currentThread().getName());
+			System.out.println("running thread priority "+ Thread.currentThread().getPriority());
 		}
 	}
 	
+	// main thread priority is 5(Normal)
 	public static void main(String[] args) {
 		
 		// new creating threads
-		NewThread thread1 = new NewThread();
+		NewThread thread1 = new NewThread(); // default priority is 5
 		NewThread thread2 = new NewThread();
+		
+		// set name 
+		thread1.setName("thread1");
+		thread2.setName("thread2");
+		
+		// thread priority
+		thread1.setPriority(Thread.MIN_PRIORITY); // 1 is min
+		thread2.setPriority(Thread.MAX_PRIORITY); // 10 is max
 		
 		// starting threads
 		thread1.start(); // runnable state 
