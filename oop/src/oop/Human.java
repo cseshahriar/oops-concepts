@@ -1,6 +1,23 @@
 package oop; // oop is package name
 
-/* @author shosen
+/**
+ * Object-Oriented Programming System (OOPs) is a programming concept
+ * that works on the principles of abstraction, encapsulation, inheritance, and polymorphism.
+ * It allows users to create objects they want and create methods to handle those objects.
+ * The basic concept of OOPs is to create objects,
+ * re-use them throughout the program, and manipulate these objects to get results.
+ *
+ *
+ * Advantage of OOPs:
+ * OOPs Concepts in offer easy to understand and a clear modular structure for programs.
+ * 
+ * Objects created for Object-Oriented Programs can be reused in other programs. 
+ * Thus it saves significant development cost.
+ * 
+ * Large programs are difficult to write, but if the development and designing team follow OOPS concepts,
+ * then they can better design with minimum flaws.
+ *  
+ * It enhances program modularity because every object exists independently.
  * 
  * Class:
  * A class can be considered as a blueprint using which you can create as many objects as you like.
@@ -25,9 +42,13 @@ package oop; // oop is package name
 public class Human { 
 	
 	//fields (or instance variable)
+	//non-static string variable
 	public String name, color;
 	public Integer age;
 	public Double height;
+	
+	//Static integer variable
+	static int myAge = 27;
 	
 	// =============== constructors ================
 	
@@ -66,7 +87,15 @@ public class Human {
 		this.height = height;
 		this.age = age;
 	}
-	
+	 
+	// This is a static method
+    static void getMyAge()
+    {
+        System.out.println("Your age is" + myAge);
+    }
+    
+    // non static methods
+    
 	// ================== getter methods ================
 	String getName() {
 		return this.name;
@@ -161,6 +190,11 @@ public class Human {
 		// obj4
 		System.out.println(objHuman4.getName() + " " + objHuman4.age +" "+objHuman4.height+" "+ objHuman4.color);
 		
+		// static call 
+		System.out.println("\nStatic method and property");
+		getMyAge();
+		Human.getMyAge();
+		System.out.println("My age is " + myAge);
 	}
 	
 }
