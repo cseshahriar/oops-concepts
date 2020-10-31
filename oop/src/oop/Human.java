@@ -1,16 +1,24 @@
 package oop; // oop is package name
 
+/* @author shosen
+ * 
+ * Class:
+ * A class can be considered as a blueprint using which you can create as many objects as you like.
+ * Custom or User defined data type
+ * Object type class
+ */
+
 /*
  * Types of class :
- * POJO Class
- * Static Class
  * 
  * Concrete Class
  * Abstract Class
  * 
+ * Static Class 
  * Final Class
  * Inner class
  * Nested Inner class
+ * Meta class(Py) 
  */
 
 // public is access modifier, that's means visible in the whole programs

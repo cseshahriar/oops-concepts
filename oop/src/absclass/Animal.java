@@ -7,9 +7,12 @@ package absclass;
  * An abstract class can have protected and public abstract methods
  * An abstract class can have static, final or static final variable with any access specifier
  * */
-public abstract class Animal {
+
+// non object type class
+public abstract class Animal { 
 	
 	// abs metthod
+	// A method that is declared but not defined. 
 	public abstract void sound();
 	
 	// regular method 
